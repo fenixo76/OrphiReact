@@ -1,2 +1,4 @@
 node_modules
 src/Config.json
+localhost-key.pem
+localhost.pem
