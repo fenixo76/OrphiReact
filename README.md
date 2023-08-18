@@ -14,24 +14,18 @@ URL de redirection: https://localhost:8001/register
 ![](./Images/app2.png)
 
 Entête Origin : *
-
 ![](./Images/app.png)
 
 Vous obtiendrai ceci:
-
 ![](./Images/app3.png)
 
 Crée un fichier Configu.json dans Src/Configu.json avec les informations suivantes:
 
 {
     "API_KEY" : "Votre API_KEY",
-    
     "CLIENT_ID" : "Votre CLIENT_ID",
-    
-    "CLIENT_SECRET" : "Votre CLIENT_SECRET",
-    
+    "CLIENT_SECRET" : "Votre CLIENT_SECRET"
     "OAUTHURL" : "https://www.bungie.net/fr/OAuth/Authorize "
-    
 }
 
 Créé aussi avec la commande: mkcert localhost deux fichier localhost et localhost-key.
