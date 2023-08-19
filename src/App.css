@@ -72,9 +72,43 @@ h1{
   font-size: 15px;
   color: white;
 }
-.test{
+.Personnage{
   display: flex;
-  flex-direction: column;
+  top: 0;
+  left: 10px;
+  flex-direction: row;
+}
+
+.Emblem{
+  height: 70px;
+  margin: 10px 30px 0px 0px;
+  border-radius: 15px;
+  opacity: 85%;
+}
+
+.Name{
+  position: absolute;
+  color: white;
+  top: -10px;
+  margin-left: 80px;
+  font-size: 22px;
+}
+
+.Titre{
+  position: absolute;
+  color: rgb(255, 188, 249);
+  top: 35px;
+  font-style: italic;
+  margin-left: 80px;
+  font-size: 17px;
+}
+
+.Puissance{
+  position: absolute;
+  color: rgb(255, 208, 0);
+  top: -3px;
+  margin-left: 280px;
+  font-size: 20px;
 }
 
 @keyframes spin {

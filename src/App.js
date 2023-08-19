@@ -58,8 +58,8 @@ function App() {
           <p className="loadingP"></p>
         </div>
       )}
-      <div className="test">
-      <button className="Button_01" onClick={getVendors}>Connexion</button>
+      <div className="Personnage">
+        
       </div>
       
     </div>

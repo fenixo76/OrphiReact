@@ -71,6 +71,32 @@ const SaveCharacter = (newInfo) => {
     if (Tableau[key]) {
         setTimeout(() => {
             loading.style.display = "none";
+            const div = document.querySelector(".Personnage")
+
+            const Personnage = document.createElement("div")
+            Personnage.classList.add("Personnage_Emblem")
+
+            const Emblem = document.createElement("img")
+            Emblem.classList.add("Emblem")
+            Emblem.src = `https://www.bungie.net/${Tableau[key].Emblem}`
+
+            const Name = document.createElement("p")
+            Name.classList.add("Name")
+            Name.innerHTML = Tableau[key].class
+
+            const Titre = document.createElement("p")
+            Titre.classList.add("Titre")
+            Titre.innerHTML = Tableau[key].titre
+
+            const Puissance = document.createElement("h2")
+            Puissance.classList.add("Puissance")
+            Puissance.innerHTML = Tableau[key].lvl[1935470627]
+
+            div.appendChild(Personnage)
+            Personnage.appendChild(Emblem)
+            Personnage.appendChild(Name)
+            Personnage.appendChild(Titre)
+            Personnage.appendChild(Puissance)
         }, 3000);
     }
 };
