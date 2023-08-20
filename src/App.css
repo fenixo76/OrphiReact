@@ -73,14 +73,14 @@ h1{
   color: white;
 }
 
+
 .Personnage{
-  display:flex;
+  display: flex;
   position: absolute;
+  left: 0;
   top: 0;
-  left: 0px;
   flex-direction: column;
   margin-left: 5px;
-  margin-right: auto;
 }
 
 .Contenaire_Personnage{
@@ -112,10 +112,13 @@ h1{
   animation-delay: 0.2s;
 }
 
+.Contenaire_Personnage:hover .Stats{
+  display: block;
+  animation: height 0.4s forwards;
+}
 
 .EmblemPath{
   display: flex;
-  position: relative;
   height: 65px;
   margin-top: 5px;
   border-radius: 15px;
@@ -128,7 +131,7 @@ h1{
   left: -70px;
   margin-left: 5px;
   margin-top: 5px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px ;
   opacity: 100%;
   object-fit: cover;
   object-position: top left;
@@ -165,6 +168,95 @@ h1{
   font-size: 20px;
 }
 
+.Stats{
+  display: none;
+  position: absolute;
+  z-index: -1;
+  margin-top: 75px;
+  opacity: 1;
+  background: rgb(63, 63, 63);
+  border-radius: 0px 0px 15px 15px;
+  height: 0;
+  width: 346px;
+  text-align: start;
+}
+
+
+.Mobilite img, .Resistance img, .Recuperation img, .Discipline img, .Intelligence img, .Force img{
+  height: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: aparition 0.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.ContenaireBarre{
+  position: absolute;
+  margin-top: -23px;
+  width: 250px;
+  margin-left: 30px;
+  opacity: 0;
+  animation: aparition 0.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.BarStat{
+  position: absolute;
+  height: 8px;
+  background: white;
+}
+.bar{
+  position: absolute;
+  height: 8px;
+  background: linear-gradient(45deg ,rgba(0, 140, 255, 0.575), rgba(225, 0, 255, 0.575));
+  width: 0%;
+  animation: test 2s forwards;
+}
+
+.bar p{
+  position: relative;
+  color: rgb(255, 255, 255);
+  border-right: solid 2px rgba(225, 0, 255, 0.575);
+  text-align: end;
+  background-size: cover;
+  margin-top: -7px;
+}
+
+.BarStat p {
+  text-align: end;
+  color: white;
+  margin-top: -8px;
+  margin-right: -60px;
+}
+
+@keyframes test {
+  0%{
+    width: 0;
+  }
+  100%{
+  }
+}
+
+@keyframes aparition {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes height{
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 210px;
+  }
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -176,6 +268,7 @@ h1{
   }
   100%{
     width: 100%;
+    margin-bottom: 210px;
   }
 }
 
