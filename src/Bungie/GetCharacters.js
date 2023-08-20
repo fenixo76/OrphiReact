@@ -2,6 +2,8 @@ import axios from "axios";
 import config from "../Config.json"
 import manifest from "./Manifest"
 import { Components } from "./Components";
+import { FaAngleDown } from "react-icons/fa"
+import React from "react";
 
 export const getCharter = async (membershipType, membershipId, Token) => {
     const P = document.querySelector(".loadingP");
@@ -30,6 +32,7 @@ export const getCharter = async (membershipType, membershipId, Token) => {
 
             const CharterID = Character.characterId;
             const EmblemeImg = Character.emblemBackgroundPath
+            const EmblemPath = Character.emblemPath
             const Stats = Character.stats
          
             const Class = manifest.num(Character.classHash).displayProperties.name
@@ -46,6 +49,7 @@ export const getCharter = async (membershipType, membershipId, Token) => {
                 class: Class,
                 characterId: CharterID,
                 Emblem: EmblemeImg,
+                EmblemPath : EmblemPath, 
                 titre: Titre,
                 lvl: Stats,
             }
@@ -76,9 +80,16 @@ const SaveCharacter = (newInfo) => {
             const Personnage = document.createElement("div")
             Personnage.classList.add("Personnage_Emblem")
 
+            const Contenaire = document.createElement("div")
+            Contenaire.classList.add("Contenaire_Personnage")
+
             const Emblem = document.createElement("img")
             Emblem.classList.add("Emblem")
             Emblem.src = `https://www.bungie.net/${Tableau[key].Emblem}`
+
+            const EmblemPath = document.createElement("img")
+            EmblemPath.classList.add("EmblemPath")
+            EmblemPath.src = `https://www.bungie.net/${Tableau[key].EmblemPath}`
 
             const Name = document.createElement("p")
             Name.classList.add("Name")
@@ -93,10 +104,13 @@ const SaveCharacter = (newInfo) => {
             Puissance.innerHTML = Tableau[key].lvl[1935470627]
 
             div.appendChild(Personnage)
-            Personnage.appendChild(Emblem)
-            Personnage.appendChild(Name)
-            Personnage.appendChild(Titre)
-            Personnage.appendChild(Puissance)
+            Personnage.appendChild(Contenaire)
+            Contenaire.appendChild(EmblemPath)
+            Contenaire.appendChild(Emblem)
+            Contenaire.appendChild(Name)
+            Contenaire.appendChild(Titre)
+            Contenaire.appendChild(Puissance)
+
         }, 3000);
     }
 };
