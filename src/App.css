@@ -30,7 +30,6 @@ h1{
   border: none;
 }
 
-
 .loading-screen {
   position: fixed;
   top: 0;
@@ -76,11 +75,8 @@ h1{
 
 .Personnage{
   display: flex;
-  position: absolute;
   left: 0;
   top: 0;
-  flex-direction: column;
-  margin-left: 5px;
 }
 
 .Contenaire_Personnage{
@@ -89,10 +85,12 @@ h1{
   transition: opacity 1s ease;
 }
 .Contenaire_Personnage:hover .EmblemPath{
+  display: none;
   opacity: 0;
 }
 
 .Contenaire_Personnage:hover .Emblem{
+  display: flex;
   opacity: 100%;
   animation: width  0.5s forwards;
 }
@@ -115,22 +113,22 @@ h1{
 .Contenaire_Personnage:hover .Stats{
   display: block;
   animation: height 0.4s forwards;
+  animation-delay: 0.3s;
 }
 
 .EmblemPath{
   display: flex;
   height: 65px;
-  margin-top: 5px;
   border-radius: 15px;
+  margin: 10px;
 }
 
 .Emblem{
+  display: none;
   position: relative;
   width: 0;
   height: 70px;
-  left: -70px;
-  margin-left: 5px;
-  margin-top: 5px;
+  margin: 10px;
   border-radius: 15px 15px 0px 0px ;
   opacity: 100%;
   object-fit: cover;
@@ -171,10 +169,10 @@ h1{
 .Stats{
   display: none;
   position: absolute;
-  z-index: -1;
-  margin-top: 75px;
+  margin-top: 80px;
+  margin-left: 10px;
   opacity: 1;
-  background: rgb(63, 63, 63);
+  background: rgba(63, 63, 63, 0.548);
   border-radius: 0px 0px 15px 15px;
   height: 0;
   width: 346px;
@@ -189,7 +187,7 @@ h1{
   margin-bottom: 5px;
   opacity: 0;
   animation: aparition 0.5s forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.6s;
 }
 
 .ContenaireBarre{
@@ -199,7 +197,7 @@ h1{
   margin-left: 30px;
   opacity: 0;
   animation: aparition 0.5s forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.6s;
 }
 
 .BarStat{
@@ -212,7 +210,8 @@ h1{
   height: 8px;
   background: linear-gradient(45deg ,rgba(0, 140, 255, 0.575), rgba(225, 0, 255, 0.575));
   width: 0%;
-  animation: test 2s forwards;
+  animation: test 1s forwards;
+  animation-delay: 0.6s;
 }
 
 .bar p{
