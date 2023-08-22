@@ -1,0 +1,52 @@
+.Loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Loading_Barre_01 {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 132, 255);
+    width: 100px;
+    height: 100px;
+    animation: Roulement 1s linear infinite;
+}
+
+.Loading_Barre_02 {
+    position: absolute;
+    border-right: 6px solid rgb(247, 0, 255);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    filter: blur(2px);
+    animation: Roulement 1s linear infinite;
+}
+
+.Loading_Titre {
+    margin-top: 230px;
+    font-size: 20px;
+}
+
+.Loading_Paragraphe {
+    position: absolute;
+    margin-top: 320px;
+    font-size: 15px;
+    color: white;
+}
+
+@keyframes Roulement {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

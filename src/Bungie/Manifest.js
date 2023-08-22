@@ -8,6 +8,7 @@ class manifest {
             "DestinyClassDefinition",
             "DestinyRecordDefinition",
             "DestinyInventoryItemDefinition",
+            "DestinyVendorDefinition",
         ];
     }
 

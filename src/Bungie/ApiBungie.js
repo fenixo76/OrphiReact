@@ -66,7 +66,7 @@ export const exchangeCodeForTokens = async (code) => {
 
 //Recuperation et sauvegarde des Info Utilisateur
 export const getDestinyMembership = async () => {
-
+ 
     const Token = JSON.parse(localStorage.getItem("SaveToken")) || [];
 
     try {
@@ -88,13 +88,11 @@ export const getDestinyMembership = async () => {
         SaveInfoUser(infoUser)
 
         const Info = JSON.parse(localStorage.getItem("SaveInfoUser")) || [];
-
+    
         if (!charterFetched) {
             charterFetched = true;
             getCharter(Info.membershipType, Info.membershipId, Token.token);
         }
-
-
 
     } catch (error) {
         console.log(error);
